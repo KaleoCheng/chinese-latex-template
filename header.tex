@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx} 
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[super]{natbib}
+
+
+%%% 中文支持  %%%
+%%######################
+
+%% 更改上下左右边距
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+%%更改行距
+\linespread{1.2}
+
+%% 添加段首行缩进
+\usepackage{indentfirst} 
+
+%% 去除图片标签后的冒号
+\usepackage{caption}
+\DeclareCaptionLabelSeparator{twospace}{\ ~}
+\captionsetup{labelsep=twospace}  
+
+
+%% 中文字体
+\usepackage{xeCJK}
+\setCJKmainfont{Songti SC Regular}   % 中文缺省中文字体
+\setCJKmonofont{Heiti SC Light}   % 中文等宽字体
+\setCJKsansfont{Heiti SC Light} % 中文无衬线字体
+\setmainfont{Adobe Garamond Regular}   % 英文衬线字体
+\setmonofont{Monaco}   % 英文等宽字体
+\setsansfont{Helvetica} % 英文无衬线字体
+
+
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+%% 中文标示
+\renewcommand{\abstractname}{摘要}
+\renewcommand{\contentsname}{目录}  
+\renewcommand\figurename{图}
+\renewcommand{\listfigurename}{\hspace{2mm}插图索引}  
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+
+%%中文支持结束%%
+%%###########################
