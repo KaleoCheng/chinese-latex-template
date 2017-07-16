@@ -1,4 +1,4 @@
-\documentclass[12pt,UTF8]{ctexart}
+\documentclass[a5paper,14pt,UTF8]{ctexart}
 
 \usepackage{graphicx} 
 \usepackage{hyperref}
@@ -6,15 +6,41 @@
 \usepackage{amssymb}
 \usepackage[super]{natbib}
 
+\usepackage{titling}
+\usepackage{tocloft}
+\usepackage{fontspec}
+\usepackage{titlesec}
+\newCJKfontfamily\fzskbxk{方正宋刻本秀楷}
 
-%%% 中文支持  %%%
-%%######################
+\renewcommand{\maketitlehooka}{\fzskbxk} % 设置 title 字体
+
+% 设置contents title 字体和样式
+\renewcommand{\cfttoctitlefont}{\hfill\Huge\fzskbxk}
+
+% 设置 contents section 字体和样式
+\renewcommand\cftsecfont{\LARGE\fzskbxk}
+
+
+\titleformat{name=\section}{}{}{0pt}{\large} % 设置 section 字体
+\titlespacing{\section}{0pt}{0pt}{50pt plus 2pt minus 2pt} % 设置 section 间距
+
+\renewcommand{\thesection}{}
+
+
+\usepackage{xeCJK}
+\setCJKmainfont{方正书宋简体}   % 中文缺省中文字体
+%\setCJKmonofont{Heiti SC Light}   % 中文等宽字体
+%\setCJKsansfont{Heiti SC Light} % 中文无衬线字体
+\setmainfont{Adobe Garamond Regular}   % 英文衬线字体
+\setmonofont{Monaco}   % 英文等宽字体
+\setsansfont{Helvetica} % 英文无衬线字体
+
 
 %% 更改上下左右边距
-%\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage[top=0.5in, bottom=1in, left=1in, right=1in]{geometry}
 
 %%更改行距
-%\linespread{1.2}
+\linespread{1.7}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -32,19 +58,6 @@
 %\DeclareCaptionLabelSeparator{twospace}{\ ~}
 %\captionsetup{labelsep=twospace}  
 
-
-%% 中文字体
-\usepackage{xeCJK}
-%\setCJKmainfont{Songti SC Regular}   % 中文缺省中文字体
-%\setCJKmonofont{Heiti SC Light}   % 中文等宽字体
-%\setCJKsansfont{Heiti SC Light} % 中文无衬线字体
-\setmainfont{Adobe Garamond Regular}   % 英文衬线字体
-\setmonofont{Monaco}   % 英文等宽字体
-\setsansfont{Helvetica} % 英文无衬线字体
-
-
-%%中文支持结束%%
-%%###########################
 
 %%定义代码框样式
 \usepackage{listings}
